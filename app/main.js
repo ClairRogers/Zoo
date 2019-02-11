@@ -61,6 +61,31 @@ function getNames() {
   for (let i = 0; i < ark.length; i++) {
     out.push(ark[i].name)
   }
-  console.log(out)
+  console.log(out.join(', '))
+  document.getElementById('print').innerText = out.join(', ')
 }
 getNames()
+
+function fourLegs() {
+  let out = []
+  for (let i = 0; i < ark.length; i++) {
+    if (ark[i].legs == 4) {
+      out.push(ark[i].name)
+    }
+  }
+  console.log(out.join(', '))
+  document.getElementById('legs').innerText = `Animals with four legs: ${out.join(', ')}`
+}
+fourLegs()
+
+function blackWhite() {
+  let out = []
+  for (let i = 0; i < ark.length; i++) {
+    if (ark[i].color == 'black and white') {
+      out.push(ark[i].name)
+    }
+  }
+  console.log(out.join(', '))
+  document.getElementById('color').innerText = `Black and white animals: ${out.join(', ')}`
+}
+blackWhite()
